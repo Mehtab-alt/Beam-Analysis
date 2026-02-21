@@ -1,0 +1,63 @@
+# Civil Engineering Workbench: Final Example
+
+project_name: "Highway Bridge Girder (Simplified)"
+
+beam_properties:
+  length: 20.0  # meters
+  E: 200e9      # Pa (GigaPascals for Steel)
+  I: 0.005      # m^4 (A larger I-beam for a bridge)
+
+supports:
+  - type: "pinned"
+    position: 0
+  - type: "roller"
+    position: 20.0
+
+loads:
+  - type: "distributed"
+    magnitude: -25000  # N/m (self-weight and deck)
+    start: 0.0
+    end: 20.0
+  - type: "point"
+    magnitude: -120000 # N (Simulated heavy truck axle load)
+    position: 8.0
+  - type: "point"
+    magnitude: -120000 # N (Simulated heavy truck axle load)
+    position: 12.0
+
+analysis_tasks:
+  - name: "Shear Force Diagram"
+    type: "plot"
+    params:
+      y_col: "Shear_Force_N"
+      title: "Shear Force Diagram (SFD)"
+      ylabel: "Shear (N)"
+    output: "sfd_diagram.png"
+
+  - name: "Bending Moment Diagram"
+    type: "plot"
+    params:
+      y_col: "Bending_Moment_Nm"
+      title: "Bending Moment Diagram (BMD)"
+      ylabel: "Moment (Nm)"
+    output: "bmd_diagram.png"
+  
+  - name: "Deflection Curve"
+    type: "plot"
+    params:
+      y_col: "Deflection_m"
+      title: "Deflection Curve"
+      ylabel: "Deflection (m)"
+    output: "deflection_curve.png"
+
+  - name: "Generate HTML Report"
+    type: "save_html_report"
+    output: "analysis_report.html"
+
+# Global settings
+global:
+  output_dir: "output"
+  
+logging:
+  level: "INFO"
+  file: "analysis.log"

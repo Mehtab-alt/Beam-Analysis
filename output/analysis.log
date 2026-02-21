@@ -1,0 +1,18 @@
+2025-11-21 18:36:22,640 - root - INFO - Logging configured with level INFO
+2025-11-21 18:36:22,640 - root - INFO - Log file available at output\analysis.log
+2025-11-21 18:36:22,640 - src.main - INFO - Starting beam analysis pipeline...
+2025-11-21 18:36:22,641 - src.civil.beam_analysis - INFO - Simply Supported: R_pin = 370000.00 N, R_roller = 370000.00 N
+2025-11-21 18:36:22,644 - src.main - INFO - Beam analysis solver finished successfully.
+2025-11-21 18:36:22,644 - src.main - INFO - --- Running Task: 'Shear Force Diagram' (plot) ---
+2025-11-21 18:36:22,646 - src.visualization.plotter - INFO - Generating line chart: 'Shear Force Diagram (SFD)' and saving to output\sfd_diagram.png
+2025-11-21 18:36:22,878 - src.visualization.plotter - INFO - Plot saved successfully to output\sfd_diagram.png
+2025-11-21 18:36:22,878 - src.main - INFO - --- Running Task: 'Bending Moment Diagram' (plot) ---
+2025-11-21 18:36:22,879 - src.visualization.plotter - INFO - Generating line chart: 'Bending Moment Diagram (BMD)' and saving to output\bmd_diagram.png
+2025-11-21 18:36:23,046 - src.visualization.plotter - INFO - Plot saved successfully to output\bmd_diagram.png
+2025-11-21 18:36:23,046 - src.main - INFO - --- Running Task: 'Deflection Curve' (plot) ---
+2025-11-21 18:36:23,046 - src.visualization.plotter - INFO - Generating line chart: 'Deflection Curve' and saving to output\deflection_curve.png
+2025-11-21 18:36:23,220 - src.visualization.plotter - INFO - Plot saved successfully to output\deflection_curve.png
+2025-11-21 18:36:23,220 - src.main - INFO - --- Running Task: 'Generate HTML Report' (save_html_report) ---
+2025-11-21 18:36:23,221 - src.reporting.reporter - INFO - Generating HTML report at output\analysis_report.html
+2025-11-21 18:36:23,229 - src.reporting.reporter - INFO - HTML report saved successfully to output\analysis_report.html
+2025-11-21 18:36:23,229 - src.main - INFO - --- Beam analysis pipeline finished ---

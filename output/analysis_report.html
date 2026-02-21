@@ -1,0 +1,222 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Highway Bridge Girder (Simplified)</title>
+        <style>
+    body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; color: #333; }
+    .container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 0 15px rgba(0,0,0,0.1); }
+    h1, h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+    h1 { text-align: center; }
+    .section { margin-bottom: 30px; }
+    pre { background: #eee; padding: 15px; border-radius: 5px; white-space: pre-wrap; word-wrap: break-word; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    th { background-color: #3498db; color: white; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    .plot-image { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px; margin-top: 10px; }
+    .footer { text-align: center; margin-top: 40px; font-size: 0.8em; color: #777; }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Highway Bridge Girder (Simplified)</h1>
+            <p class="footer">Generated on: 2026-02-22 00:11:14</p>
+
+            <div class="section">
+                <h2>Input Parameters</h2>
+                <h3>Beam Properties</h3>
+                <ul><li><b>Length:</b> 20.0</li><li><b>E:</b> 200e9</li><li><b>I:</b> 0.005</li></ul>
+                <h3>Supports</h3>
+                <ul><li><b>Pinned Support</b> at position 0 m</li><li><b>Roller Support</b> at position 20.0 m</li></ul>
+                <h3>Loads</h3>
+                <ul><li><b>Distributed Load:</b> -25000 N/m from 0.0 m to 20.0 m</li><li><b>Point Load:</b> -120000 N at 8.0 m</li><li><b>Point Load:</b> -120000 N at 12.0 m</li></ul>
+            </div>
+
+            <div class="section">
+                <h2>Analysis Plots</h2>
+                <h3>Shear Force Diagram (SFD)</h3><img src='sfd_diagram.png' alt='Shear Force Diagram (SFD)' class='plot-image'><h3>Bending Moment Diagram (BMD)</h3><img src='bmd_diagram.png' alt='Bending Moment Diagram (BMD)' class='plot-image'><h3>Deflection Curve</h3><img src='deflection_curve.png' alt='Deflection Curve' class='plot-image'>
+            </div>
+
+            <div class="section">
+                <h2>Key Results</h2>
+                <table>
+                    <tr><th>Metric</th><th>Value</th></tr>
+                    <tr><td>Maximum Shear Force</td><td>370000.00 N</td></tr>
+                    <tr><td>Minimum Shear Force</td><td>-369875.00 N</td></tr>
+                    <tr><td>Maximum Bending Moment</td><td>2210625.00 Nm</td></tr>
+                    <tr><td>Minimum Bending Moment</td><td>1250.00 Nm</td></tr>
+                    <tr><td>Maximum Deflection</td><td>-89.875 mm</td></tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>Full Results Data (Sample)</h2>
+                <table border="1" class="dataframe results-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Position_m</th>
+      <th>Shear_Force_N</th>
+      <th>Bending_Moment_Nm</th>
+      <th>Slope_rad</th>
+      <th>Deflection_m</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.0</td>
+      <td>370000.0</td>
+      <td>1850.0</td>
+      <td>0.0000</td>
+      <td>0.0000</td>
+    </tr>
+    <tr>
+      <td>1.0</td>
+      <td>345000.0</td>
+      <td>359287.5</td>
+      <td>0.0002</td>
+      <td>-0.0140</td>
+    </tr>
+    <tr>
+      <td>2.0</td>
+      <td>320000.0</td>
+      <td>691725.0</td>
+      <td>0.0007</td>
+      <td>-0.0277</td>
+    </tr>
+    <tr>
+      <td>3.0</td>
+      <td>295000.0</td>
+      <td>999162.5</td>
+      <td>0.0016</td>
+      <td>-0.0407</td>
+    </tr>
+    <tr>
+      <td>4.0</td>
+      <td>270000.0</td>
+      <td>1281600.0</td>
+      <td>0.0027</td>
+      <td>-0.0527</td>
+    </tr>
+    <tr>
+      <td>5.0</td>
+      <td>245000.0</td>
+      <td>1539037.5</td>
+      <td>0.0041</td>
+      <td>-0.0635</td>
+    </tr>
+    <tr>
+      <td>6.0</td>
+      <td>220000.0</td>
+      <td>1771475.0</td>
+      <td>0.0058</td>
+      <td>-0.0726</td>
+    </tr>
+    <tr>
+      <td>7.0</td>
+      <td>195000.0</td>
+      <td>1978912.5</td>
+      <td>0.0077</td>
+      <td>-0.0801</td>
+    </tr>
+    <tr>
+      <td>8.0</td>
+      <td>50000.0</td>
+      <td>2160750.0</td>
+      <td>0.0097</td>
+      <td>-0.0855</td>
+    </tr>
+    <tr>
+      <td>9.0</td>
+      <td>25000.0</td>
+      <td>2198187.5</td>
+      <td>0.0119</td>
+      <td>-0.0888</td>
+    </tr>
+    <tr>
+      <td>10.0</td>
+      <td>0.0</td>
+      <td>2210625.0</td>
+      <td>0.0141</td>
+      <td>-0.0899</td>
+    </tr>
+    <tr>
+      <td>11.0</td>
+      <td>-25000.0</td>
+      <td>2198062.5</td>
+      <td>0.0163</td>
+      <td>-0.0888</td>
+    </tr>
+    <tr>
+      <td>12.0</td>
+      <td>-170000.0</td>
+      <td>2159900.0</td>
+      <td>0.0185</td>
+      <td>-0.0855</td>
+    </tr>
+    <tr>
+      <td>13.0</td>
+      <td>-195000.0</td>
+      <td>1977337.5</td>
+      <td>0.0206</td>
+      <td>-0.0800</td>
+    </tr>
+    <tr>
+      <td>14.0</td>
+      <td>-220000.0</td>
+      <td>1769775.0</td>
+      <td>0.0224</td>
+      <td>-0.0726</td>
+    </tr>
+    <tr>
+      <td>15.0</td>
+      <td>-245000.0</td>
+      <td>1537212.5</td>
+      <td>0.0241</td>
+      <td>-0.0634</td>
+    </tr>
+    <tr>
+      <td>16.0</td>
+      <td>-270000.0</td>
+      <td>1279650.0</td>
+      <td>0.0255</td>
+      <td>-0.0527</td>
+    </tr>
+    <tr>
+      <td>17.0</td>
+      <td>-295000.0</td>
+      <td>997087.5</td>
+      <td>0.0267</td>
+      <td>-0.0407</td>
+    </tr>
+    <tr>
+      <td>18.0</td>
+      <td>-320000.0</td>
+      <td>689525.0</td>
+      <td>0.0275</td>
+      <td>-0.0277</td>
+    </tr>
+    <tr>
+      <td>19.0</td>
+      <td>-345000.0</td>
+      <td>356962.5</td>
+      <td>0.0280</td>
+      <td>-0.0140</td>
+    </tr>
+    <tr>
+      <td>20.0</td>
+      <td>0.0</td>
+      <td>1250.0</td>
+      <td>0.0282</td>
+      <td>0.0000</td>
+    </tr>
+  </tbody>
+</table>
+            </div>
+            
+            <p class="footer">End of Report</p>
+        </div>
+    </body>
+    </html>
+    

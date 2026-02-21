@@ -1,0 +1,6 @@
+pandas
+matplotlib
+PyYAML
+pytest
+numpy
+sv-ttk>=2.6.1
