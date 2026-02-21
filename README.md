@@ -19,3 +19,7 @@ The application allows users to define a beam's properties, its supports, and th
 - `requirements.txt`: Lists the Python dependencies.
 - `run_cli.py`: Entry point to run the application from the command line.
 - `run_gui.py`: Entry point to launch the GUI.
+
+
+  <img src="SS.png" alt="BeamAnalysis" width="100%">
+  <img src="SS1.png" alt="BeamAnalysis" width="100%">
